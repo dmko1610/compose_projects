@@ -31,25 +31,19 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    TutorialHeaderImage()
+                    Tutorial()
                 }
             }
         }
     }
 }
 
+
 @Composable
-fun TutorialHeaderImage(modifier: Modifier = Modifier) {
+fun Tutorial(modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.bg_compose_background)
     Column {
         Image(painter = image, contentDescription = null, contentScale = ContentScale.FillWidth)
-        TutorialTitleText(modifier = modifier)
-    }
-}
-
-@Composable
-fun TutorialTitleText(modifier: Modifier = Modifier) {
-    Column {
         Text(
             text = stringResource(R.string.tutorial_text),
             fontSize = 24.sp,
@@ -72,6 +66,6 @@ fun TutorialTitleText(modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     LearnTogetherAppTheme {
-        TutorialHeaderImage()
+        Tutorial()
     }
 }
