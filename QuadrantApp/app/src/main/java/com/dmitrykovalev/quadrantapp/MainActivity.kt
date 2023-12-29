@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -45,29 +46,29 @@ fun Quadrant(modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxWidth()) {
         Row(modifier = modifier.weight(1f)) {
             QuadrantCard(
-                title = "Text Composable",
-                description = "Displays text and follows the recommended Material Design guidelines.",
+                title = stringResource(R.string.text_composable),
+                description = stringResource(R.string.text_description),
                 backgroundColor = Color(0xFFEADDFF),
                 modifier = modifier.weight(1f)
 
             )
             QuadrantCard(
-                title = "Image composable",
-                description = "Creates a composable that lays out and draws a given Painter class object.",
+                title = stringResource(R.string.image_composable),
+                description = stringResource(R.string.image_description),
                 backgroundColor = Color(0xFFD0BCFF),
                 modifier = modifier.weight(1f)
             )
         }
         Row(modifier = modifier.weight(1f)) {
             QuadrantCard(
-                title = "Row composable",
-                description = "A layout composable that places its children in a horizontal sequence.",
+                title = stringResource(R.string.row_composable),
+                description = stringResource(R.string.row_description),
                 backgroundColor = Color(0xFFB69DF8),
                 modifier = modifier.weight(1f)
             )
             QuadrantCard(
-                title = "Column composable",
-                description = "A layout composable that places its children in a vertical sequence.",
+                title = stringResource(R.string.column_composable),
+                description = stringResource(R.string.column_description),
                 backgroundColor = Color(0xFFF6EDFF),
                 modifier = modifier.weight(1f)
             )
